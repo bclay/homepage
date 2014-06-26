@@ -15,7 +15,8 @@ a:hover {
 .btn-default:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #ccc;
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 
 
@@ -29,9 +30,9 @@ body {
   background-color: 0;
 }
 body {
-  color: black;
+  color: #333;
   text-align: center;
-
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 }
 
@@ -49,11 +50,15 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+    top: 100px;
+    position: relative;
+   overflow-y: hidden;
 }
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 10px;
+
 }
 
 
@@ -62,7 +67,13 @@ body {
  */
 .masthead-brand {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+    color: white;
+}
+
+.masthead-new{
+    overflow: auto;
+    background-color: #333;
 }
 
 .masthead-nav > li {
@@ -76,20 +87,20 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: black; /* IE8 proofing */
-  color: rgba(0,0,0,.75);
+  color: white; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
-  border-bottom-color: #333;
+  border-bottom-color: white;
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: black;
-  border-bottom-color: #333;
+  color: white;
+  border-bottom-color: white;
 }
 
 @media (min-width: 768px) {
@@ -149,6 +160,7 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+
 }
 
 @media (min-width: 992px) {
