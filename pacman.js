@@ -1,6 +1,3 @@
-//change rotation from 0.1->0.4
-//change eye x from 10->0
-
 var eye = new Circle(0,-35,7)
  .attr('fillColor', '#fff');
 var on  = 'l 60 0 L 60 0 A 60 60 0 1 1 48.54 -35.26';
@@ -35,12 +32,22 @@ pacman.addChild.call(pacman, [pm, eye]);
 
 var num = pacdot1.radius;
 
+var click = true;
+
+
+
 var i = 0;
 (function loop(e) {
-  setTimeout(loop, 10);
+  pm.on('click', function(data){
+    if(click){click = false;}
+    else{click = true;}
+  });
+  setTimeout(loop, 50);
   pm.path(i%2 ? on : off);
   pacman.attr('x', i);
-  i++;
+  if(click){
+    i++;
+  };
   if(i == p1x){
     stage.removeChild(pacdot1);
   }
@@ -54,3 +61,4 @@ var i = 0;
     stage.removeChild(pacdot4);
   }
 })();
+
