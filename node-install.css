@@ -1,0 +1,10 @@
+body{
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+}
+ul { list-style: none; }
+ul li { text-align: center; list-style-type: none;  }
+ol { list-style: none; }
+ol li { text-align: center; list-style-type: none;  }
